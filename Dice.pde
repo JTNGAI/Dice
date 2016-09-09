@@ -15,9 +15,9 @@ void draw()
      Die ken= new Die(100,300);
      Die erica= new Die(350,300);
      Die sam= new Die(600,300);
-     Die guenne= new Die(100,550);
-     Die choy= new Die(350,550);
-     Die jo= new Die(600,550);
+     Die guenne= new Die(100,535);
+     Die choy= new Die(350,535);
+     Die jo= new Die(600,535);
      bob.Show();
      bob.Roll();
      sue.Show();
