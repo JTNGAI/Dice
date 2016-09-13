@@ -9,19 +9,28 @@ void draw()
 {
     //your code here
     background(187,202,210);
+    int sum=0;
           //your code here
             
-     for(int y=41; y<=710; y+=231)
-     //3 columns at 100 300 500
+     for(int y=41; y<=700; y+=230)
+     //3 columns 
     { 
-     for(int x=41; x<=926; x+=236)
-     //5  rows at 200 400 600 
+     for(int x=41; x<=900; x+=230)
+     //4 rows 
      {
      Die bob = new Die (x,y);    
      bob.Show();
      bob.Roll();
+     if(bob.roll<10000)
+     {
+       sum= sum+ bob.roll;
+     }
+   
     } 
     }
+    stroke(0);
+    textSize(40);
+    text("The Total Amount is: " + sum , 48,764);
 }    
 void mousePressed()
 {
