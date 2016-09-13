@@ -1,4 +1,4 @@
-Die bob,sue,koi,ken,erica,sam,guenne,choy,jo;
+Die bob;
 void setup()
 {
     size(1000, 800);
@@ -9,38 +9,23 @@ void draw()
 {
     //your code here
     background(187,202,210);
-     Die bob = new Die(100,70);
-     Die sue= new Die(350,70);
-     Die koi= new Die(600,70);
-     Die ken= new Die(100,300);
-     Die erica= new Die(350,300);
-     Die sam= new Die(600,300);
-     Die guenne= new Die(100,535);
-     Die choy= new Die(350,535);
-     Die jo= new Die(600,535);
+          //your code here
+            
+     for(int y=41; y<=710; y+=231)
+     //3 columns at 100 300 500
+    { 
+     for(int x=41; x<=926; x+=236)
+     //5  rows at 200 400 600 
+     {
+     Die bob = new Die (x,y);    
      bob.Show();
      bob.Roll();
-     sue.Show();
-     sue.Roll();
-     koi.Show();
-     koi.Roll();
-     ken.Show();
-     ken.Roll();
-     erica.Show();
-     erica.Roll();
-     sam.Show();
-     sam.Roll();
-     guenne.Show();
-     guenne.Roll();
-     choy.Show();
-     choy.Roll();
-     jo.Show();
-     jo.Roll();
-}
+    } 
+    }
+}    
 void mousePressed()
 {
   
-    Class Die;
     redraw();
 }
 class Die //models one single dice cube
@@ -61,10 +46,9 @@ class Die //models one single dice cube
    }
     void Show()
     {
-        //your code here
         fill(6);
-        rect(myX, myY, 200,200);
-       
+        rect(myX,myY, 200,200);
+        
         if (roll==1)
         {
         fill (255);
@@ -114,3 +98,4 @@ class Die //models one single dice cube
     }
     
 }
+    
